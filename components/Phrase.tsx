@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from './ui/button';
 import { ChevronDown, ChevronUp, Copy } from 'lucide-react';
 
-const Phrase = ({setShowMnemonic, showMnemonic, onButtonClick, mnemonicWords}) => {
+const Phrase = ({setShowMnemonic, showMnemonic, onButtonClick, mnemonicWords}: any) => {
   return (
     <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -53,7 +53,7 @@ const Phrase = ({setShowMnemonic, showMnemonic, onButtonClick, mnemonicWords}) =
                 }}
                 className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-center w-full items-center mx-auto my-8"
               >
-                {mnemonicWords.map((word, index) => (
+                {mnemonicWords.map((word:string, index:any) => (
                   <p
                     key={index}
                     className="md:text-lg bg-foreground/5 hover:bg-foreground/10 transition-all duration-300 rounded-lg p-4"
