@@ -2,8 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Button } from './ui/button';
 import { Eye, EyeOff, Grid2X2, List, Trash } from 'lucide-react';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogTitle, AlertDialogTrigger } from '@radix-ui/react-alert-dialog';
-import { AlertDialogFooter, AlertDialogHeader } from './ui/alert-dialog';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from './ui/alert-dialog';
 
 const Pairs = ({pathTypeName, wallets, setGridView, gridView, handleAddWallet, handleClearWallets, handleDeleteWallet, copyToClipboard, visiblePrivateKeys, togglePrivateKeyVisibility}: any) => {
   return (
@@ -38,14 +37,14 @@ const Pairs = ({pathTypeName, wallets, setGridView, gridView, handleAddWallet, h
                         Clear Wallets
                       </Button>
                     </AlertDialogTrigger>
-                    <AlertDialogContent>
+                    <AlertDialogContent className=''>
                       <AlertDialogHeader>
                         <AlertDialogTitle>
                           Are you sure you want to delete all wallets?
                         </AlertDialogTitle>
                         <AlertDialogDescription>
                           This action cannot be undone. This will permanently delete
-                          your wallets and keys from local storage.
+                          your wallets from our server.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
@@ -94,8 +93,8 @@ const Pairs = ({pathTypeName, wallets, setGridView, gridView, handleAddWallet, h
                               Are you sure you want to delete all wallets?
                             </AlertDialogTitle>
                             <AlertDialogDescription>
-                              This action cannot be undone. This will permanently
-                              delete your wallets and keys from local storage.
+                              This action cannot be undone. This will permanently delete
+                              your wallets from our server.
                             </AlertDialogDescription>
                           </AlertDialogHeader>
                           <AlertDialogFooter>
